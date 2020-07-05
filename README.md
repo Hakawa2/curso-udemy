@@ -50,9 +50,6 @@
         npm run codegen
     ```
 
-
-    ````
-
 ## Imagens no desktop, com a adição de dark theme que não foi passado no curso
 
 | LigthMode                                               | DarkMode                                                |
