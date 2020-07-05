@@ -58,3 +58,50 @@
 | <img src="https://i.imgur.com/EgtIYX1.png" width="800"> | <img src="https://i.imgur.com/E9N3NxV.png" width="800"> |
 | <img src="https://i.imgur.com/2EXd9lI.png" width="800"> | <img src="https://i.imgur.com/vCWui1d.png" width="800"> |
 | <img src="https://i.imgur.com/jmJwfvp.png" width="800"> | <img src="https://i.imgur.com/Y2GkACH.png" width="800"> |
+
+## Gerar build Android
+
+    Como utilizei react, o cordova não aceita com isso é necessario adicionar o capacitor.
+
+    Ter instalado na maquina
+
+    Android Studio
+
+-   Documentação do Capacitor:
+    https://capacitorjs.com/docs/getting-started/with-ionic
+
+-   Instalar o Capacitor
+
+    ```bash
+        npm install @capacitor/core @capacitor/cli
+    ```
+
+-   Habilitar integração
+
+    ```bash
+        ionic integrations enable capacitor
+    ```
+
+-   Buidar
+
+    ```bash
+        ionic build
+    ```
+
+-   Adicionar Plataforma
+
+    ```bash
+        npx cap add android
+    ```
+
+-   Abrir o Projeto no Android Studio
+
+    ```bash
+        npx cap open android
+    ```
+
+    Após abrir o Android Studio, ir em Build -> Build Bundle(s)/ Apk(s) -> Build Apk(s) e esperar buildar, por padrão a build é gerada nesse path dentro da raiz do repositorio
+
+    ```bash
+        android\app\build\outputs\apk\debug
+    ```

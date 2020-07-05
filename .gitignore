@@ -7,11 +7,13 @@
 package-lock.json
 debug.log
 
+
 # testing
 /coverage
 
 # production
 /build
+/android
 
 # misc
 .DS_Store
