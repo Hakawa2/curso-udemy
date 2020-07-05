@@ -13,6 +13,7 @@ import {
 } from "@ionic/react";
 import { Components } from "@ionic/core";
 import { locate } from "ionicons/icons";
+import ToggleTheme from "../toggleTheme/toggleTheme";
 
 interface Link {
     path: string;
@@ -73,6 +74,7 @@ const Menu: React.FC<Props> = (props) => {
                             </IonItem>
                         ))}
                     </IonMenuToggle>
+                    <ToggleTheme />
                 </IonList>
             </IonContent>
         </IonMenu>

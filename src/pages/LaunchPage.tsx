@@ -12,6 +12,7 @@ import {
     IonRow,
     IonCol,
     IonLoading,
+    IonMenuButton,
 } from "@ionic/react";
 import { useParams } from "react-router";
 import { useLaunchQuery, Launch } from "../generated/graphql";
@@ -41,6 +42,9 @@ const LaunchPage: React.FC = () => {
                 <IonToolbar>
                     <IonButtons slot="start">
                         <IonBackButton text="" defaultHref="/launches" />
+                    </IonButtons>
+                    <IonButtons slot="start">
+                        <IonMenuButton />
                     </IonButtons>
                     <IonTitle>Launch</IonTitle>
                 </IonToolbar>

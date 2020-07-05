@@ -5,4 +5,8 @@ const crop = (str: string, length = 50, dots = false) => {
     return !dots ? output : `${output}...`;
 };
 
-export { crop };
+const darkTheme = (isTrue: boolean) => {
+    document.body.classList.toggle("dark", isTrue);
+};
+
+export { crop, darkTheme };

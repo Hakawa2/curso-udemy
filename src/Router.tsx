@@ -1,6 +1,6 @@
 import React from "react";
 import { IonReactRouter } from "@ionic/react-router";
-import { IonRouterOutlet, IonSplitPane } from "@ionic/react";
+import { IonRouterOutlet } from "@ionic/react";
 import { Redirect, Route } from "react-router-dom";
 
 import LaunchesPage from "./pages/LaunchesPage";
@@ -8,20 +8,18 @@ import LaunchPage from "./pages/LaunchPage";
 
 const Router: React.FC = (props) => (
     <IonReactRouter>
-        <IonSplitPane contentId="main-content" when="md">
-            {props.children}
-            <IonRouterOutlet id="main-content">
-                <Route path="/launches" exact>
-                    <LaunchesPage />
-                </Route>
-                <Route path="/launches/:id" exact>
-                    <LaunchPage />
-                </Route>
-                <Route path="/" exact>
-                    <Redirect to="/launches" />
-                </Route>
-            </IonRouterOutlet>
-        </IonSplitPane>
+        {props.children}
+        <IonRouterOutlet id="main-content">
+            <Route path="/launches" exact>
+                <LaunchesPage />
+            </Route>
+            <Route path="/launches/:id" exact>
+                <LaunchPage />
+            </Route>
+            <Route path="/" exact>
+                <Redirect to="/launches" />
+            </Route>
+        </IonRouterOutlet>
     </IonReactRouter>
 );
 
